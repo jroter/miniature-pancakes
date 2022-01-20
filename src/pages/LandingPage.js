@@ -12,8 +12,7 @@ export default function LandingPage() {
     const test = Math.random() * 10
     const [counter,setCounter] = useState(test)
     return (
-        <div>
-            
+        <div> 
             <div className="header">
                 <div className="header-flex-box">
                     <div className="header-left-content">
