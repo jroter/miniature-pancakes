@@ -1,0 +1,48 @@
+.image-class {
+    height: 400px;
+    width: 400px;
+}
+
+.donne-class {
+    height: 500px;
+    width:  500px;
+}
+
+.header {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    width: 100%;
+    height: 650px;
+
+}
+
+.title {
+    font-size: 45px;
+    width: 560px;
+}
+
+.header-flex-box {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.header-left-content {
+    position: relative;
+    top: 110px;
+    left: 150px;
+}
+
+.header-right-content {
+    align-self: end;
+}
+
+.header-button-content {
+    margin-top:94px;
+}
+
+.button-spacer {
+    width: 27px;
+    display: inline-block;
+}
