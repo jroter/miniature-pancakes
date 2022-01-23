@@ -1,3 +1,7 @@
+body {
+    font-family:'ubuntu';
+}
+
 .image-class {
     height: 400px;
     width: 400px;
@@ -9,8 +13,7 @@
 }
 
 .header {
-    background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-color: #E5E5E5;
     width: 100%;
     height: 650px;
 
@@ -36,6 +39,8 @@
 
 .header-right-content {
     align-self: end;
+    width: 768px;
+    height: 538px;
 }
 
 .header-button-content {
@@ -45,4 +50,82 @@
 .button-spacer {
     width: 27px;
     display: inline-block;
+}
+
+.landing-page-content-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 13px;
+    flex-direction: column;
+}
+
+.top-section-flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.content-container-statement {
+    font-size: 28px;
+}
+
+.see-all {
+    font-size: 16px;
+}
+
+.landings-module-container {
+    display: flex;
+}
+
+.big-module-container {
+    flex-basis: 70%;
+    margin-right: 26px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    background-image: url('../images/icon.png');
+    background-size: 100% 100%;
+}
+
+.big-module-title {
+    margin-bottom: 62px;
+    font-size: 50px;
+    position: relative;
+    top: 26px;
+    color: #505D68;
+}
+
+.big-module-info {
+    max-width: 576px;
+    font-size: 26px;
+}
+
+.small-module-container {
+    flex-basis: 30%;
+}
+
+
+.small-module:first-child {
+    margin-bottom: 26px;
+    background-image: url('../images/module.png');
+    background-size: 100% 100%;
+}
+
+.small-module-title {
+    position: relative;
+    top: 176px;
+    left: 100px;
+    color: #505D68;
+}
+
+.small-module {
+    display:block;
+    width: 100% !important;
+    height: 267px;
+    background-image: url('../images/module.png');
+    background-size: 100% 100%;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ImageComponent = ({image}) => {
+const ImageComponent = ({image, className}) => {
     return (
         <>
-            <img src={image} style={{height:'inherit',width:'inherit'}}></img>
+            <img src={image} className={className} style={{height:'inherit',width:'inherit'}}></img>
         </>
     )
 }
