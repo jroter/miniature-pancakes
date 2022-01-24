@@ -1,0 +1,40 @@
+.accordion {
+    font-size: 14px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 1px solid #A1AEB7;
+    color: #A1AEB7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+}
+
+.accordion:hover {
+    cursor: pointer;
+    background-color: #F2F5F7;
+}
+
+.accordion-control-active {
+    font-size: 22px;
+    transform: rotate(90deg);
+}
+
+.accordion-control-inactive {
+    font-size: 22px;
+}
+
+.accordion-content-visible { 
+    flex-basis: 100%;
+    margin-top: 6px;
+    visibility: visible;
+    height: auto;
+}
+
+.accordion-content-invisibile {
+    visibility: hidden;
+    height: 0px;
+    width: 100%;
+}

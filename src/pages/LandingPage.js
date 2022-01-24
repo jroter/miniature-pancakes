@@ -1,16 +1,19 @@
 import React, {useState} from 'react'
-import ImageComponent from '../components/ImageComponent'
+
+// Components
+import AccordionComponent from '../components/AccordionComponent/AccordionComponent'
 import ButtonComponent from '../components/ButtonComponent'
+import ImageComponent from '../components/ImageComponent'
 import LinkComponent from '../components/LinkComponent'
-import donald from '../images/Donald.jpeg'
+
+// CSS
+import './LandingPage.css' 
+
+// Assets
 import template from '../images/template.png'
 import icon from '../images/icon.png'
-import './LandingPage.css' 
-import { findAllInRenderedTree } from 'react-dom/test-utils'
-
-export default function LandingPage() {
-    // const test = Math.random() * 10
-    // const [counter,setCounter] = useState(test)
+const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+const LandingPage = () => {
     return (
         <div> 
             <div className="header">
@@ -29,6 +32,7 @@ export default function LandingPage() {
                     </div>
                 </div>
             </div>
+
             <div className="landing-page-content-container">
                 <div className="top-section-flexbox">
                     <div className="content-container-statement">Continue where you left off:</div>
@@ -53,9 +57,40 @@ export default function LandingPage() {
                         <div className="small-module" >
                             <div className="small-module-title">Start-Up Module 1.2</div>
                         </div>
+                    </div>s
+                </div>
+                <div className="next-module-container">
+                    <div className='next-module-statement'>Next Module:</div>
+                    <div className="module-containers">
+                        <div className="module-window">
+                            <p className="module-title">Finance</p>
+                            <div className="module-image"></div>
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                        </div>
+                        <div className="module-window">
+                            <p className="module-title">Ideas</p>
+                            <div className="module-image"></div>
+                        </div>
+                        <div className="module-window">
+                            <p className="module-title">Technology</p>
+                            <div className="module-image"></div>
+                        </div>
                     </div>
+                </div>
+                <div className="article-title">Article</div>
+                <div className="article-container">
+                    <div className="article-window"></div>
+                    <div className="article-window"></div>
+                    <div className="article-window"></div>
+                </div>
+                <div className="read-button">
+                    <ButtonComponent label="Read All" />
                 </div>
             </div>
         </div>
     )
 }
+
+export default LandingPage
