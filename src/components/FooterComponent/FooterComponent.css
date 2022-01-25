@@ -1,0 +1,10 @@
+.footer {
+    border: 1px solid #F2F5F7;
+}
+
+.router-footer {
+    float: right;
+    padding-bottom: 70px;
+    padding-right: 58px;
+    padding-top: 26px;
+}

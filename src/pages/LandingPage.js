@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
+import { Link } from "react-router-dom";
 
 // Components
 import AccordionComponent from '../components/AccordionComponent/AccordionComponent'
 import ButtonComponent from '../components/ButtonComponent'
 import ImageComponent from '../components/ImageComponent'
 import LinkComponent from '../components/LinkComponent'
+import FooterComponent from '../components/FooterComponent/FooterComponent';
+import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 
 // CSS
 import './LandingPage.css' 
@@ -12,10 +15,12 @@ import './LandingPage.css'
 // Assets
 import template from '../images/template.png'
 import icon from '../images/icon.png'
+
 const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 const LandingPage = () => {
     return (
         <div> 
+            <HeaderComponent />
             <div className="header">
                 <div className="header-flex-box">
                     <div className="header-left-content">
@@ -28,7 +33,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div className='header-right-content'>
-                        <ImageComponent image={template} />
+                        <ImageComponent image={template} className="header-right-image"/>
                     </div>
                 </div>
             </div>
@@ -57,7 +62,7 @@ const LandingPage = () => {
                         <div className="small-module" >
                             <div className="small-module-title">Start-Up Module 1.2</div>
                         </div>
-                    </div>s
+                    </div>
                 </div>
                 <div className="next-module-container">
                     <div className='next-module-statement'>Next Module:</div>
@@ -81,14 +86,27 @@ const LandingPage = () => {
                 </div>
                 <div className="article-title">Article</div>
                 <div className="article-container">
-                    <div className="article-window"></div>
-                    <div className="article-window"></div>
-                    <div className="article-window"></div>
+                    <div className="article-window">
+                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                        <p className="article-title">10 steps for success in start-ups</p>
+                        <p className="article-info">{loren}</p>
+                    </div>
+                    <div className="article-window">
+                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                        <p className="article-title">Peter Thiel’s top suggestions for start-ups</p>
+                        <p className="article-info">{loren}</p>
+                    </div>
+                    <div className="article-window">
+                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                        <p className="article-title">How to be an entrepreneur</p>
+                        <p className="article-info">{loren}</p>
+                    </div>
                 </div>
                 <div className="read-button">
                     <ButtonComponent label="Read All" />
                 </div>
             </div>
+            <FooterComponent />
         </div>
     )
 }

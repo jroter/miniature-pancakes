@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+
+// Components
+import LandingPage from './pages/LandingPage';
+import LessonsPage from './pages/LessonsPage';
+import ResourcePage from './pages/ResourcePage'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="modules" element={<LessonsPage />} />
+        <Route path="resources" element={<ResourcePage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

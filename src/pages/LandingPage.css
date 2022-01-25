@@ -1,5 +1,7 @@
 body {
     font-family:'ubuntu';
+    min-width: 900px;
+    max-width: 2600px;
 }
 
 .image-class {
@@ -14,14 +16,11 @@ body {
 
 .header {
     background-color: #E5E5E5;
-    width: 100%;
     height: 650px;
-
 }
 
 .title {
     font-size: 45px;
-    width: 560px;
 }
 
 .header-flex-box {
@@ -32,15 +31,20 @@ body {
 }
 
 .header-left-content {
-    position: relative;
-    top: 110px;
-    left: 150px;
+    margin-top: 111px;
+    margin-left: 152px;
+    flex-basis: 40%;
 }
 
 .header-right-content {
     align-self: end;
-    width: 768px;
     height: 538px;
+    flex-basis: 60%;
+}
+
+.header-right-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .header-button-content {
@@ -78,6 +82,7 @@ body {
 
 .landings-module-container {
     display: flex;
+    min-height: 560px;
 }
 
 .big-module-container {
@@ -105,6 +110,8 @@ body {
 }
 
 .small-module-container {
+    display: flex;
+    flex-direction: column;
     flex-basis: 30%;
 }
 
@@ -116,16 +123,15 @@ body {
 }
 
 .small-module-title {
-    position: relative;
-    top: 176px;
-    left: 100px;
     color: #505D68;
+    text-align: center;
+    margin-top: 176px;
 }
 
 .small-module {
+    flex-basis: 50%;
     display:block;
     width: 100% !important;
-    height: 267px;
     background-image: url('../images/module.png');
     background-size: 100% 100%;
 }
@@ -175,6 +181,22 @@ body {
     text-align: center;
 }
 
+.article-title {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 27px;
+    margin-top: 15px;
+    color: #505D68;
+}
+
+.article-info {
+    font-size: 14px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 62px;
+    color: #A1AEB7;
+}
+
 .article-container {
     /* height: 711px; */
     height: 321px;
@@ -183,15 +205,22 @@ body {
     flex-direction: row;
 }
 
+.article-header {
+    margin-left: 18px;
+    margin-top: 44px;
+    font-size: 14px;
+    color: #A1AEB7;
+}
+
 .article-window {
     margin-top: 27px;
-    width: 362px;
+    flex-basis: 30%;
     height: 321px;
     border: 1px solid black;
 }
 
 .read-button {
-    margin-top: 575px;
+    margin-top: 150px;
     text-align: center;
     margin-bottom: 93px;
 }
