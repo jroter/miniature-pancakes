@@ -77,29 +77,47 @@ const LandingPage = () => {
                         <div className="module-window">
                             <p className="module-title">Ideas</p>
                             <div className="module-image"></div>
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
                         </div>
                         <div className="module-window">
                             <p className="module-title">Technology</p>
                             <div className="module-image"></div>
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
+                            <AccordionComponent title={"lauren ipsom"} summary={loren} />
                         </div>
                     </div>
                 </div>
-                <div className="article-title">Article</div>
+                <div className="article-title">Articles</div>
                 <div className="article-container">
                     <div className="article-window">
-                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
-                        <p className="article-title">10 steps for success in start-ups</p>
-                        <p className="article-info">{loren}</p>
+                        <div>
+                            <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                            <p className="article-title">10 steps for success in start-ups</p>
+                        </div>
+                        <div>
+                            <p className="article-info">{loren}</p>
+                        </div>
                     </div>
                     <div className="article-window">
-                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
-                        <p className="article-title">Peter Thiel’s top suggestions for start-ups</p>
-                        <p className="article-info">{loren}</p>
+                        <div>
+                            <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                            <p className="article-title">Peter Thiel’s top suggestions for start-ups</p>
+                        </div>
+                        <div>
+                            <p className="article-info">{loren}</p>
+                        </div>
                     </div>
                     <div className="article-window">
-                        <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
-                        <p className="article-title">How to be an entrepreneur</p>
-                        <p className="article-info">{loren}</p>
+                        <div>
+                            <p className="article-header"> 22 Oct 2022 | By Jack Morgan</p>
+                            <p className="article-title">How to be an entrepreneur</p>
+                        </div>
+                        <div>
+                            <p className="article-info">{loren}</p>
+                        </div>
                     </div>
                 </div>
                 <div className="read-button">

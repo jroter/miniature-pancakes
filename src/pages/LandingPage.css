@@ -49,6 +49,7 @@ body {
 
 .header-button-content {
     margin-top:94px;
+    text-decoration: none;
 }
 
 .button-spacer {
@@ -70,14 +71,17 @@ body {
     justify-content: space-between;
     flex-grow: 1;
     align-items: center;
+    margin-bottom: 68px;
 }
 
 .content-container-statement {
     font-size: 28px;
+    color: #505D68;
 }
 
 .see-all {
     font-size: 16px;
+    text-decoration: none;
 }
 
 .landings-module-container {
@@ -107,6 +111,7 @@ body {
 .big-module-info {
     max-width: 576px;
     font-size: 26px;
+    color: #505D68;
 }
 
 .small-module-container {
@@ -185,7 +190,7 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 27px;
-    margin-top: 15px;
+    margin-top: 104px;
     color: #505D68;
 }
 
@@ -198,8 +203,6 @@ body {
 }
 
 .article-container {
-    /* height: 711px; */
-    height: 321px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -213,10 +216,13 @@ body {
 }
 
 .article-window {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     margin-top: 27px;
     flex-basis: 30%;
-    height: 321px;
-    border: 1px solid black;
+    border-radius: 4px;
+    border: 1px solid #A1AEB7;
 }
 
 .read-button {

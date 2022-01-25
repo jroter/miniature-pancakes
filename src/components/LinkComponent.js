@@ -1,12 +1,13 @@
 import React from 'react'
 
-const MyStyles = {
-    color:"#424B5A"
+const linkComponentStyles = {
+    color: "#424B5A",
+    textDecoration: 'none' 
 }
 
 const LinkComponent = ({label, href}) => {
     return (
-        <a style={MyStyles} href={href} target="_blank">{label}</a> 
+        <a style={linkComponentStyles} href={href} target="_blank">{label}</a> 
     )
 }
 
