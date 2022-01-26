@@ -14,32 +14,24 @@ export default function LessonsPage() {
     return (
         <div>
             <div className="mod-page-container">
-                <div className="mod-title">Fresh Content</div>
-                <div className="mod-container">
-                   <div className="top-mod-container">
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
+                <div className="mod-title"><strong>Fresh Content</strong></div>
+                <div class="new-modules-container">
+                    <div className="new-modules-top">
+                        <div className="new-module-small">
+                            <div className="new-module-small-img-background"></div>
                         </div>
-                        <div className='module-window-large'>
-
+                        <div className="new-module-large">
                         </div>
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
+                        <div className="new-module-small">
+                            <div className="new-module-small-img-background"></div>
                         </div>
-                   </div>
-                   <div className="bottom-mod-container">
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
-                        </div>
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
-                        </div>
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
-                        </div>
-                        <div className='module'>
-                            <ImageComponent image={icon} className="module-window-default"/>
-                        </div>
+                    </div>
+                    <div className="new-modules-bottom">
+                        {[...Array(4)].map((_, index) => (
+                            <div className="new-module-small" key={index}>
+                                <div className="new-module-small-img-background"></div>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="completed-title">
