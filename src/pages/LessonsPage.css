@@ -41,13 +41,6 @@ body {
 .module-window-default {
     height: 198px !important;
 }
-/* 
-.module-tag {
-    border: 1px solid black;
-    margin-bottom: 302px;
-    flex-basis: 101px;
-    background-color: #C2D1D9;
-} */
 
 .module-window-large {
     display: block;
@@ -56,6 +49,18 @@ body {
     flex-basis: 556px;
     background-image: url('../images/icon.png');
     background-size: 100% 100%;
+}
+
+.module-label {
+    position: relative;
+    top: 8px;
+    left: 8px;
+    background-color: #C2D1D9;
+    border-radius: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: 100px;
 }
 
 .bottom-mod-container {
@@ -71,27 +76,33 @@ body {
     text-align: center;
     font-size: 50px;
     color: #505D68;
+    margin-bottom: 45px;
 }
 
-.completed-container {
-    margin-top: 87px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.completed-modules-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 95px;
     margin-left: 150px;
     margin-right: 150px;
-    margin-bottom: 95px;
 }
 
 .completed-module {
-    display: block;
-    border: 1px solid #A1AEB7;
-    min-height: 339px;
+    flex-grow: 1;
+    border: 1px solid white;
+}
+.completed-module-img-background {
+    background-image: url('../images/icon.png');
+    height: 200px;
+    background-size: 100% 100%;
 }
 
-
-
-
+.completed-module-info {
+    font-size: 21px;
+    color:#505D68;
+    margin-bottom: 46px;
+}
 
 /* ---------------------------*/
 
@@ -118,13 +129,33 @@ body {
 .new-module-large {
     background-image: url('../images/icon.png');
     background-size: 100% 100%;
-    flex-grow: 2.1;
+    flex-basis: 52%;
     border: 1px solid #A1AEB7;
 }
 
 .new-module-small {
-    flex-grow: 1;
+    flex-basis: 25%;
     border: 1px solid #A1AEB7;
+}
+
+.new-module-title {
+    font-size: 16px;
+    color: #505D68;
+}
+
+.new-module-info {
+    padding-left: 18px;
+    padding-top: 24px;
+    min-width: 260px;
+}
+
+.new-module-data {
+    font-size: 14px;
+    color: #A1AEB7;
+    max-width: 220px;
+    max-height: 34px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .new-module-small-img-background {

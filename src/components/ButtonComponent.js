@@ -6,9 +6,9 @@ const MyStyles = {
     color:"#FFFFFF", textTransform:'uppercase' 
 }
 
-const ButtonComponent = ({label}) => {
+const ButtonComponent = ({style,label}) => {
     return (
-        <button style={MyStyles}>{label}</button> 
+        <button style={{...MyStyles,...style}}>{label}</button> 
     )
 }
 
