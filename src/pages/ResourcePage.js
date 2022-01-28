@@ -5,6 +5,7 @@ import './ResourcePage.css'
 import FooterComponent from '../components/FooterComponent/FooterComponent'
 import ButtonComponent from '../components/ButtonComponent'
 import ImageComponent from '../components/ImageComponent'
+import LinkComponent from '../components/LinkComponent'
 
 //images
 import icon from '../images/icon.png'
@@ -12,25 +13,6 @@ import icon from '../images/icon.png'
 export default function ResourcePage() {
 
     const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam."
-    // const renderCard = () => {
-    //     return (
-    //         <div className="new-module-small">
-    //             <div className="new-module-small-img-background">
-    //                 <div className="module-label">
-    //                     Label
-    //                 </div>
-    //             </div>
-    //             <div className="new-module-info">
-    //                 <div className="new-module-title">
-    //                     Module
-    //                 </div>
-    //                 <p className="new-module-data">
-    //                     {loren}
-    //                 </p>
-    //             </div>
-    //         </div>
-    //     )
-    // }
 
     return (
         <div>
@@ -63,12 +45,51 @@ export default function ResourcePage() {
                         Fresh Content
                     </div>
                     <div className="fresh-content-container">
-                        <div className="fresh-content-small-card">1</div>
-                        <div className="fresh-content-large-card">2</div>
-                        <div className="fresh-content-small-card">3</div>
+                        <div className="fresh-content-small-card">
+                            <div className='small-card-image'></div>
+                            <div className='small-card-info'>
+                                <div className='label'>label</div>
+                                <div className='small-card-title'>
+                                    Read more about the pros of being an entrepreneur
+                                </div>
+                                <div className='small-card-excerpt'>{loren}</div>
+                                <div className='small-card-hyper-link'>
+                                    <LinkComponent label='Learn More!' href="https://youtu.be/rg7Fvvl3taU" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="fresh-content-large-card">
+                            <div className='large-card-image'></div>
+                            <div className='large-card-info'>
+                                <div className='label'>label</div>
+                                <div className='large-card-title'>
+                                    Read more about the pros of being an entrepreneur
+                                </div>
+                                <div className='large-card-excerpt'>{loren}</div>
+                                <div className='large-card-hyper-link'>
+                                    <LinkComponent label='Learn More!' href="https://youtu.be/rg7Fvvl3taU" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="fresh-content-small-card">
+                            <div className='small-card-image'></div>
+                            <div className='small-card-info'>
+                                <div className='label'>label</div>
+                                <div className='small-card-title'>
+                                    Read more about the pros of being an entrepreneur
+                                </div>
+                                <div className='small-card-excerpt'>
+                                    {loren}
+                                </div>
+                                <div className='small-card-hyper-link'>
+                                    <LinkComponent label='Learn More!' href="https://youtu.be/rg7Fvvl3taU" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <FooterComponent />
         </div>
     )
 }
