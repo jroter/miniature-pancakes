@@ -74,6 +74,8 @@ body {
 
 .small-card-info {
     padding-top: 14px;
+    padding-left: 14px;
+    min-width: 390px;
 }
 
 .small-card-image {
@@ -87,26 +89,20 @@ body {
     font-size: 21px;
     color: #505D68;
     padding-top: 14px;
-    width: 333px;
-    padding-left: 14px;
-    padding-right: 14px;
 }
 
 .small-card-excerpt {
     color: #A1AEB7;
     font-size: 14px;
-    padding-left: 14px;
     padding-top: 14px;
 }
 
 .small-card-hyper-link {
-    padding-left: 14px;
     padding-top: 45px;
     text-decoration: underline;
 }
 
 .label {
-    position: relative;
     top: 8px;
     left: 8px;
     background-color: #C2D1D9;
