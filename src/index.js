@@ -5,8 +5,8 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 // Components
 import LandingPage from './pages/LandingPage';
 import LessonsPage from './pages/LessonsPage';
-import ResourcePage from './pages/ResourcePage'
-
+import ResourcePage from './pages/ResourcePage';
+import ModulePage from './pages/ModulePage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +15,7 @@ ReactDOM.render(
         <Route path="/" element={<LandingPage />} />
         <Route path="modules" element={<LessonsPage />} />
         <Route path="resources" element={<ResourcePage />} />
+        <Route path="modulepage" element={<ModulePage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

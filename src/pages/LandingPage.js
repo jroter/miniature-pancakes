@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // Components
 import AccordionComponent from '../components/AccordionComponent/AccordionComponent'
 import ButtonComponent from '../components/ButtonComponent'
+import ButtonLinkComponent from '../components/ButtonLinkComponent';
 import ImageComponent from '../components/ImageComponent'
 import LinkComponent from '../components/LinkComponent'
 import FooterComponent from '../components/FooterComponent/FooterComponent';
@@ -18,6 +19,15 @@ import icon from '../images/icon.png'
 
 const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 const LandingPage = () => {
+
+    const clicked = () => {
+        console.log("parent clicked")
+    }
+
+    const testClick = () => {
+        console.log("READ MORE")
+    }
+
     return (
         <div> 
             <HeaderComponent />
@@ -27,7 +37,7 @@ const LandingPage = () => {
                         <div className="title">Welcome to the Start-Up/Entrepreneur database</div>
                         <p>Start up info and entrepreneurship </p>
                         <div className="header-button-content">
-                            <ButtonComponent label='Start Now!' />
+                            <ButtonLinkComponent route='/modulepage' text='Start Now!'  />
                             <span className='button-spacer'></span>
                             <LinkComponent label='Watch Now!' href="https://www.youtube.com/watch?v=tB70YAoxk6A&ab_channel=LifeFunnyPets" />
                         </div>
@@ -121,7 +131,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="read-button">
-                    <ButtonComponent label="Read All" />
+                    <ButtonComponent label="Read All" handleClick={testClick} />
                 </div>
             </div>
             <FooterComponent />
