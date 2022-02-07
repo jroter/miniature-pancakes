@@ -1,0 +1,25 @@
+{
+  "name": "hello_world_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getTables": "node dynamo_scripts/get_tables.js",
+    "createTables": "node dynamo_scripts/create_tables.js",
+    "addLike": "node dynamo_scripts/addLike.js",
+    "getLikes": "node dynamo_scripts/get_likes.js",
+    "addDislikes": "node dynamo_scripts/addDislike.js",
+    "getDislikes": "node dynamo_scripts/get_dislikes.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1069.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
