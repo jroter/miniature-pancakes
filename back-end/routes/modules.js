@@ -18,11 +18,17 @@ router.get('/', (req, res) => {
 // });
 //gets the module likes and dislikes fromo Dynamo to show via module/:moduleId
 
+router.get('/allmodules', async (req, res) => {
+    const dynamoResponse = await dynamo.getAllModulesInfo();
+    res.send(dynamoResponse);
+})
+
 router.get('/:moduleId', async (req, res) => {
     const moduleId = req.params.moduleId;
     const dynamoResponse = await dynamo.getModuleInfo(moduleId);
     res.send(dynamoResponse);
 });
+
 
 router.post('/:moduleId/visits', async (req, res) => {
     const moduleId = req.params.moduleId;

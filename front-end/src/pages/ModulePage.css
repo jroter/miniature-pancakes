@@ -4,8 +4,14 @@
     margin-bottom: 70px;
 }
 
+.module-header {
+    display: flex;
+    align-items: center;
+}
+
 .module-title {
     font-size: 50px;
+    margin-left: 20px;
     color: #505D68
 }
 

@@ -59,6 +59,25 @@ exports.addVisit = (module) => {
     });
 }
 
+exports.getAllModulesInfo = () => {
+    console.log("hello")
+    const params = {
+        TableName: tableName
+    }
+    return dynamo.scan(params).promise()
+    .then((data) => {
+        console.log(data)
+        if (!data || !data.Items) {
+            return {}
+        }
+        return data
+    })
+    .catch((err) => {
+        console.log(err);
+        return {};
+    });
+}
+
 exports.getModuleInfo = (module) => {
     const params = {
         TableName: tableName,

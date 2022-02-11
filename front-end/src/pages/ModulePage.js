@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 // CSS
 import './ModulePage.css';
@@ -9,12 +10,32 @@ import '../images/icon.png'
 // Components
 import LinkComponent from '../components/LinkComponent';
 import FooterComponent from '../components/FooterComponent/FooterComponent';
-
+import LikeButtonComponent from '../components/LikeButtonComponent/LikeButton';
 
 export default function ModulePage() {
 
+    const [moduleData, setModuleData] = useState({})
+
+    const getModuleData = () => {
+        axios.get('http://localhost:4000/module/1/').then(response => {
+            setModuleData(response.data)
+        })
+    }
+
+    const addModuleLike = () => {
+        axios.post(`http://localhost:4000/module/1/like`).then(_ => {
+            getModuleData();
+        })
+    }
+
+    useEffect(() => {
+        getModuleData()
+    }, []);
+    
+
     const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam consequat sed doeiusm."
     const renderCard = () => {
+
         return (
             <div className="new-module-small">
                 <div className="new-module-small-img-background">
@@ -37,7 +58,10 @@ export default function ModulePage() {
   return (
       <div>
         <div className="module-title-container">
-            <div className='module-title'>Module 1</div>
+            <div className='module-header'>
+                <LikeButtonComponent likes={moduleData.likes} handleClick={addModuleLike} />
+                <div className='module-title'>Module 1</div>
+            </div>
             <p className='module-info'>
                 {loren}
             </p>

@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios';
 
 // CSS
-import "./LikeButton.css";
+import "./ShowLikesComponent.css";
 
-const LikeButtonComponent = ({likes, handleClick}) => {
+const ShowLikesComponent = ({likes}) => {
 
   const [showLikes, setShowLikes] = useState(0)
   const modifyLikes = () => {
@@ -19,21 +18,12 @@ const LikeButtonComponent = ({likes, handleClick}) => {
     modifyLikes()
   }, [likes]);
   
-
-  const buttonClick = () => {
-    handleClick()
-  }
   return (
-        <div>
-          <button
-            className="like-button"
-            onClick={buttonClick}
-          >
+        <div className = 'show-likes-container'>
             &#10084;
             <div className="like-number">{showLikes}</div>
-          </button>
         </div>
       );
 }
 
-export default LikeButtonComponent
+export default ShowLikesComponent

@@ -1,21 +1,49 @@
-import React from 'react'
-
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 // CSS
 import './LessonsPage.css'
 
 // Components
 import FooterComponent from '../components/FooterComponent/FooterComponent'
-import ImageComponent from '../components/ImageComponent'
+import ShowLikesComponent from '../components/ShowLikesComponent/ShowLikesComponent';
 
 // Assets
-import icon from '../images/icon.png'
 import ButtonComponent from '../components/ButtonComponent'
 
 export default function LessonsPage() {
     const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    const renderCard = () => {
+    
+    const [moduleData, setModuleData] = useState([])
+
+    const getAllModulesData = () => {
+        axios.get('http://localhost:4000/module/allmodules').then(response => {
+            const compare = (a,b) => {
+                if((a.module) < b.module) {
+                    return -1;
+                }if(a.module > b.module) {
+                    return 1;
+                }else {
+                    return 0;
+                }
+            }
+            const serverResponse = response.data.Items.sort(compare)
+            setModuleData(serverResponse)
+        })
+    }
+
+    const addModuleLike = (index) => {
+        axios.post(`http://localhost:4000/module/${index+1}/like`).then(_ => {
+            getAllModulesData()
+        })
+    }
+
+    useEffect(() => {
+        getAllModulesData()
+    }, [])
+
+    const renderCard = (index) => {
         return (
-            <div className="new-module-small">
+            <div className="new-module-small" key={`card-${index}`}>
                 <div className="new-module-small-img-background">
                     <div className="module-label">
                         Label
@@ -23,11 +51,12 @@ export default function LessonsPage() {
                 </div>
                 <div className="new-module-info">
                     <div className="new-module-title">
-                        Module
+                        Module {moduleData[index]?.module} 
                     </div>
                     <p className="new-module-data">
                         {loren}
                     </p>
+                    <ShowLikesComponent likes={moduleData[index]?.likes || 0} />
                 </div>
             </div>
         )
@@ -37,18 +66,18 @@ export default function LessonsPage() {
         <div>
             <div className="mod-page-container">
                 <div className="mod-title"><strong>Fresh Content</strong></div>
-                <div class="new-modules-container">
+                <div className="new-modules-container">
                     <div className="new-modules-top">
-                        {renderCard()}
+                        {renderCard(0)}
                         <div className="new-module-large">
                             <div className="module-label">
                                 Label
                             </div>
                         </div>
-                        {renderCard()}
+                        {renderCard(1)}
                     </div>
                     <div className="new-modules-bottom">
-                        {[...Array(4)].map((_, index) => renderCard())}
+                        {[...Array(4)].map((_, index) => renderCard(index+2))}
                     </div>
                 </div>
                 <div className="completed-title">
