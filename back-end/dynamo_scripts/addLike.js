@@ -1,3 +1,3 @@
-const dynamoClient = require('../dynamoClient');
+const dynamoClient = require('../clients/dynamo');
 
-dynamoClient.addLike('Module 2');
+dynamoClient.addLike('1');

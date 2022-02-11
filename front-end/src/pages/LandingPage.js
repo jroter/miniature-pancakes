@@ -1,5 +1,4 @@
-import React, {useState} from 'react'
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 // Components
@@ -10,39 +9,46 @@ import ImageComponent from '../components/ImageComponent'
 import LinkComponent from '../components/LinkComponent'
 import FooterComponent from '../components/FooterComponent/FooterComponent';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
+import LikeButtonComponent from '../components/LikeButtonComponent/LikeButton';
 
 // CSS
 import './LandingPage.css' 
 
 // Assets
 import template from '../images/template.png'
-import icon from '../images/icon.png'
 
 const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 const LandingPage = () => {
 
-    axios.get('http://localhost:4000/user').then(response => {
-        console.log(response.data)
-        console.log(response.status)
-        console.log(response.statusText)
-    })
+    const [moduleData, setModuleData] = useState({})
 
-    const clicked = () => {
-        console.log("parent clicked")
+    const getModuleData = () => {
+        axios.get('http://localhost:4000/module/1').then(response => {
+            setModuleData(response.data)
+        })
     }
 
-    const testClick = () => {
-        console.log("READ MORE")
+    const addModuleLike = () => {
+        axios.post('http://localhost:4000/module/1/like').then(_ => {
+            getModuleData()
+        })
     }
+
+    useEffect(() => {
+        getModuleData()
+    }, [])
 
     return (
         <div> 
             <HeaderComponent />
             <div className="header">
+                <LikeButtonComponent likes={moduleData.likes} handleClick={addModuleLike} />
                 <div className="header-flex-box">
                     <div className="header-left-content">
                         <div className="title">Welcome to the Start-Up/Entrepreneur database</div>
-                        <p>Start up info and entrepreneurship </p>
+                        <p>Start up info and entrepreneurship</p>
+                        {/* <div>{userData.name}</div>
+                        <div>{userData.favoriteMod}</div> */}
                         <div className="header-button-content">
                             <ButtonLinkComponent route='/modulepage' text='Start Now!'  />
                             <span className='button-spacer'></span>
@@ -57,7 +63,10 @@ const LandingPage = () => {
 
             <div className="landing-page-content-container">
                 <div className="top-section-flexbox">
-                    <div className="content-container-statement">Continue where you left off:</div>
+                    <div className="content-container-statement">Continue where you left off:
+                        {/* <div>{userMod.currentMod}</div>
+                        <div>{userMod.subject}</div> */}
+                    </div>
                     <div className="see-all">
                         <LinkComponent label='See all' href="https://www.youtube.com/watch?v=dIuVC0umHVs&ab_channel=JoshR" />
                     </div>
@@ -138,7 +147,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="read-button">
-                    <ButtonComponent label="Read All" handleClick={testClick} />
+                    <ButtonComponent label="Read All" handleClick={()=>{}} />
                 </div>
             </div>
             <FooterComponent />

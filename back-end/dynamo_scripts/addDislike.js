@@ -1,3 +1,3 @@
 const dynamoClient = require('../dynamoClient');
 
-dynamoClient.addDislike('Module 2');
+dynamoClient.addDislike('2');

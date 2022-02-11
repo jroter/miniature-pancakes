@@ -9,7 +9,7 @@ AWS.config.update({
 const dynamodb = new AWS.DynamoDB();
 
 const params = {
-    TableName: 'likeDislike',
+    TableName: 'moduleInformation',
     KeySchema: [
         {AttributeName: "module", KeyType: "HASH"}
     ],
