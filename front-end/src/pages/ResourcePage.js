@@ -2,6 +2,7 @@ import React from 'react'
 import './ResourcePage.css'
 
 // Components
+import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import FooterComponent from '../components/FooterComponent/FooterComponent'
 import ButtonComponent from '../components/ButtonComponent'
 import ImageComponent from '../components/ImageComponent'
@@ -16,6 +17,7 @@ export default function ResourcePage() {
 
     return (
         <div>
+            <HeaderComponent />
             <div className="resource-container">
                 <div className="resource-title">
                     Resources

@@ -4,15 +4,9 @@ body {
     max-width: 2600px;
 }
 
-/* .image-class {
-    height: 400px;
-    width: 400px;
+.header-component-background {
+    background-color: #E5E5E5;
 }
-
-.donne-class {
-    height: 500px;
-    width:  500px;
-} */
 
 .header {
     background-color: #E5E5E5;

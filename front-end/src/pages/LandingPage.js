@@ -19,8 +19,10 @@ const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 const LandingPage = () => {
 
     return (
-        <div> 
-            <HeaderComponent />
+        <div > 
+            <div className='header-component-background'>
+                <HeaderComponent />
+            </div>
             <div className="header">
                 <div className="header-flex-box">
                     <div className="header-left-content">

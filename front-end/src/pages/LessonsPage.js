@@ -4,6 +4,7 @@ import axios from 'axios';
 import './LessonsPage.css'
 
 // Components
+import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import FooterComponent from '../components/FooterComponent/FooterComponent'
 import ShowLikesComponent from '../components/ShowLikesComponent/ShowLikesComponent';
 
@@ -28,12 +29,6 @@ export default function LessonsPage() {
             }
             const serverResponse = response.data.Items.sort(compare)
             setModuleData(serverResponse)
-        })
-    }
-
-    const addModuleLike = (index) => {
-        axios.post(`http://localhost:4000/module/${index+1}/like`).then(_ => {
-            getAllModulesData()
         })
     }
 
@@ -64,6 +59,7 @@ export default function LessonsPage() {
 
     return (
         <div>
+            <HeaderComponent />
             <div className="mod-page-container">
                 <div className="mod-title"><strong>Fresh Content</strong></div>
                 <div className="new-modules-container">
