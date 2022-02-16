@@ -5,11 +5,7 @@ import './ResourcePage.css'
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import FooterComponent from '../components/FooterComponent/FooterComponent'
 import ButtonComponent from '../components/ButtonComponent'
-import ImageComponent from '../components/ImageComponent'
 import LinkComponent from '../components/LinkComponent'
-
-//images
-import icon from '../images/icon.png'
 
 export default function ResourcePage() {
 

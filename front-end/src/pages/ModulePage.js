@@ -35,10 +35,9 @@ export default function ModulePage() {
     
 
     const loren = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam consequat sed doeiusm."
-    const renderCard = () => {
-
+    const renderCard = (index) => {
         return (
-            <div className="new-module-small">
+            <div className="new-module-small" key = {`module-card-${index}`}>
                 <div className="new-module-small-img-background">
                     <div className="module-label">
                         Label
@@ -108,7 +107,7 @@ export default function ModulePage() {
                     </div>
                 </div>
                 <div className="next-modules-bottom">
-                        {[...Array(4)].map((_, index) => renderCard())}
+                        {[...Array(4)].map((_, index) => renderCard(index))}
                 </div>
             </div>
         </div>
