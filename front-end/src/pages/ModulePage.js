@@ -11,6 +11,7 @@ import '../images/icon.png'
 import LinkComponent from '../components/LinkComponent';
 import FooterComponent from '../components/FooterComponent/FooterComponent';
 import LikeButtonComponent from '../components/LikeButtonComponent/LikeButton';
+import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 
 export default function ModulePage() {
 
@@ -57,6 +58,7 @@ export default function ModulePage() {
 
   return (
       <div>
+        <HeaderComponent />
         <div className="module-title-container">
             <div className='module-header'>
                 <LikeButtonComponent likes={moduleData.likes} handleClick={addModuleLike} />

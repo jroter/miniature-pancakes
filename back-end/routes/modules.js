@@ -11,13 +11,6 @@ router.get('/', (req, res) => {
     res.send(modDetails)
 });
 
-// router.get('/:moduleId', async (req, res) => {
-//     const moduleId = req.params.moduleId;
-//     const dynamoResponse = await dynamo.getVisits(moduleId);
-//     res.send(dynamoResponse);
-// });
-//gets the module likes and dislikes fromo Dynamo to show via module/:moduleId
-
 router.get('/allmodules', async (req, res) => {
     const dynamoResponse = await dynamo.getAllModulesInfo();
     res.send(dynamoResponse);
@@ -47,11 +40,6 @@ router.post('/:moduleId/dislike', async (req,res) => {
     const dynamoResponse = await dynamo.addDisLike(moduleId);
     res.send(dynamoResponse);
 });
-
-// router.post('/', (req, res) => {
-//     res.send('POST route on things.');
-// });
-
 
 //export this router to use in our index.js
 module.exports = router;

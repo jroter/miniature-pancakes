@@ -1,7 +1,5 @@
 body {
     font-family:'ubuntu';
-    min-width: 900px;
-    max-width: 2600px;
 }
 .mod-page-container {
     display: flex;
@@ -10,6 +8,8 @@ body {
     padding-right: 7%;
     margin-top: 13px;
     flex-direction: column;
+    min-width: 900px;
+    max-width: 2600px;
 }
 
 .mod-title {

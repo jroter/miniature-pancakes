@@ -1,7 +1,5 @@
 body {
     font-family:'ubuntu';
-    min-width: 900px;
-    max-width: 2600px;
 }
 
 .header-component-background {
@@ -11,6 +9,8 @@ body {
 .header {
     background-color: #E5E5E5;
     height: 650px;
+    min-width: 900px;
+    max-width: 2600px;
 }
 
 .title {
