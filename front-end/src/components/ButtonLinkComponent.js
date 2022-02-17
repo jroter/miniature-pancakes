@@ -8,9 +8,9 @@ const buttonLinkStyles = {
     color:"#FFFFFF", textTransform:'uppercase', textDecoration: 'none'
 }
 
-const ButtonLinkComponent = ({route,text}) => {
+const ButtonLinkComponent = ({style, route,text}) => {
   return (
-    <Link style={buttonLinkStyles} to={route} className='button-link'>{text}</Link> 
+    <Link style={{...buttonLinkStyles, ...style}} to={route} className='button-link'>{text}</Link> 
   );
 };
 

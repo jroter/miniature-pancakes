@@ -45,7 +45,7 @@ const LandingPage = () => {
                     <div className="content-container-statement">Continue where you left off:
                     </div>
                     <div className="see-all">
-                        <LinkComponent label='See all' href="https://www.youtube.com/watch?v=dIuVC0umHVs&ab_channel=JoshR" />
+                        <ButtonLinkComponent route='/modules' text='See All' style={{color: "#424B5A", textDecoration: 'none', padding: 'none', background: 'white'}}/>
                     </div>
                 </div>
                 <div className="landings-module-container">
