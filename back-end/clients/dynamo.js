@@ -60,7 +60,6 @@ exports.addVisit = (module) => {
 }
 
 exports.getAllModulesInfo = () => {
-    console.log("hello")
     const params = {
         TableName: tableName
     }
