@@ -9,8 +9,8 @@ body {
 .header {
     background-color: #E5E5E5;
     height: 650px;
-    min-width: 900px;
-    max-width: 2600px;
+    /* min-width: 900px;
+    max-width: 2600px; */
 }
 
 .title {
@@ -37,8 +37,8 @@ body {
 }
 
 .header-right-image {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .header-button-content {
@@ -137,7 +137,7 @@ body {
 .next-module-statement {
     font-size: 50px;
     color: #505D68;
-    margin-bottom: 182px;
+    /* margin-bottom: 182px; */
     margin-top: 153px;
 }
 
@@ -156,7 +156,6 @@ body {
 .module-window {
     display: block;
     width: 362px;
-    padding-right: 30px;
 }
 
 .module-image {

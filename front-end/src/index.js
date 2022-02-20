@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 
+// CSS
+import './styles/styles.css'
+
 // Components
 import LandingPage from './pages/LandingPage';
 import LessonsPage from './pages/LessonsPage';

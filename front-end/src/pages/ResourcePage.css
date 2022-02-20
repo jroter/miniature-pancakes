@@ -63,6 +63,7 @@ body {
     height: 555px;
     gap: 30px;
     margin-bottom: 114px;
+    justify-items: center;
 }
 
 .fresh-content-small-card {
