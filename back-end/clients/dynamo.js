@@ -3,11 +3,18 @@ const AWS = require("aws-sdk");
 //pointing to our local DynamoDB
 AWS.config.update({
     region: "us-west-2",
-    endpoint: "http://localhost:8000"
 });
 
+if (process.env.NODE_ENV === 'development') {
+    AWS.config.update({
+        endpoint: "http://localhost:8000"
+    });
+}
+
+console.log(process.env.NODE_ENV);
+
 const dynamo = new AWS.DynamoDB.DocumentClient();
-const tableName = "moduleInformation";
+const tableName = "ModuleInfo";
 
 exports.getVisits = (module) => {
     const params = {

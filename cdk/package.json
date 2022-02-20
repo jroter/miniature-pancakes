@@ -6,6 +6,9 @@
   },
   "scripts": {
     "build": "tsc",
+    "bootstrap": "cdk bootstrap",
+    "deploy-server": "cdk deploy BackEndStack",
+    "deploy-react": "cdk deploy FrontEndStack",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"

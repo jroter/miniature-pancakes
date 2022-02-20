@@ -1,14 +1,44 @@
-# Welcome to your CDK TypeScript project
+# Getting Started
 
-This is a blank project for TypeScript development with CDK.
+## Setup your environment
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+### Install Node Modules
+This installs the dependencies needed for this project
+```
+npm install
+```
 
-## Useful commands
+### Bootstrap Your AWS Account for CDK
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+Note that you only need to run this if you are using a new account. You don't need to run this if your account has already been used with CDK.
+
+```
+npm run bootstrap
+```
+
+## Making A Code Change
+After making a code change, run the steps below to deploy your changes to AWS.
+
+### Build The Project
+
+```
+npm run build
+```
+
+##### Deploying React Changes
+If you make a change on the front-end, be sure to re-build the front-end before rebuilding CDK.
+```
+cd ../front-end && npm run build && cd ../cdk && npm run build
+```
+
+
+### Deploy The Change To AWS
+
+#### Deploy REACT
+```
+npm run deploy-react
+```
+#### Deploy Server
+```
+npm run deploy-server
+```

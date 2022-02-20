@@ -17,8 +17,12 @@ export default function LessonsPage() {
     
     const [moduleData, setModuleData] = useState([])
 
+    const apiEndPoint = process.env.NODE_ENV === 'development' 
+    ? 'http:localhost:4000'
+    : 'https://fbn2d2rqa8.execute-api.us-west-2.amazonaws.com/prod'
+
     const getAllModulesData = () => {
-        axios.get('http://localhost:4000/module/allmodules').then(response => {
+        axios.get(`${apiEndPoint}/module/allmodules`).then(response => {
             const compare = (a,b) => {
                 if((a.module) < b.module) {
                     return -1;

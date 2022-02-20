@@ -11,6 +11,7 @@ Once you're finished reading the command to start the DynamoDB enter this:
 
 ## Creating Local Database
 To create and seed a local data run the commands: 
+
 This generates a new local table
 
     npm run createTables
@@ -24,6 +25,7 @@ This seeds new Dislikes
     npm run addDislikes
 
 You can also run get scripts 
+
 
 ## Project Folder Structure
 - clients - contains scripts that interact with your database  

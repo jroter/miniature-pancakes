@@ -13,18 +13,22 @@ import FooterComponent from '../components/FooterComponent/FooterComponent';
 import LikeButtonComponent from '../components/LikeButtonComponent/LikeButton';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 
+const apiEndPoint = process.env.NODE_ENV === 'development' 
+    ? 'http:localhost:4000'
+    : 'https://fbn2d2rqa8.execute-api.us-west-2.amazonaws.com/prod'
+
 export default function ModulePage() {
 
     const [moduleData, setModuleData] = useState({})
-
+    console.log(process.env);
     const getModuleData = () => {
-        axios.get('http://localhost:4000/module/1/').then(response => {
+        axios.get(`${apiEndPoint}/module/1/`).then(response => {
             setModuleData(response.data)
         })
     }
 
     const addModuleLike = () => {
-        axios.post(`http://localhost:4000/module/1/like`).then(_ => {
+        axios.post(`${apiEndPoint}/module/1/like`).then(_ => {
             getModuleData();
         })
     }
