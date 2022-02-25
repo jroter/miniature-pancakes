@@ -1,8 +1,8 @@
-import { RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
+import { Duration, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3Deployment from 'aws-cdk-lib/aws-s3-deployment'
-import {Distribution, OriginAccessIdentity} from "aws-cdk-lib/aws-cloudfront";
+import {CachePolicy, Distribution, OriginAccessIdentity} from "aws-cdk-lib/aws-cloudfront";
 import {S3Origin} from "aws-cdk-lib/aws-cloudfront-origins";
 
 export class FrontEndStack extends Stack {
@@ -11,8 +11,6 @@ export class FrontEndStack extends Stack {
 
     const websiteBucket = new s3.Bucket(this, 'WebsiteBucket', { 
       removalPolicy: RemovalPolicy.DESTROY,
-      // websiteIndexDocument: "index.html",
-      // websiteErrorDocument: "index.html"
     });
 
     const websiteDeployment = new s3Deployment.BucketDeployment(this, 'DeployStaticWebsite', {
@@ -27,6 +25,11 @@ export class FrontEndStack extends Stack {
       defaultRootObject: 'index.html',
       defaultBehavior: {
         origin: new S3Origin(websiteBucket, {originAccessIdentity}),
+        cachePolicy: new CachePolicy(this, 'cacheManager',{
+          minTtl: Duration.minutes(3),
+          maxTtl: Duration.minutes(3),
+          defaultTtl: Duration.minutes(3)
+        }) 
       },
       errorResponses: [
         {
