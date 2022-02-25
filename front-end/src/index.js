@@ -9,7 +9,9 @@ import './styles/styles.css'
 import LandingPage from './pages/LandingPage';
 import LessonsPage from './pages/LessonsPage';
 import ResourcePage from './pages/ResourcePage';
-import ModulePage from './pages/ModulePage';
+import ModuleOne from './pages/module-pages/ModuleOne';
+import ModuleTwo from './pages/module-pages/ModuleTwo';
+import PlaceHolderModule from './pages/module-pages/PlaceHolderModule';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +20,12 @@ ReactDOM.render(
         <Route path="/" element={<LandingPage />} />
         <Route path="modules" element={<LessonsPage />} />
         <Route path="resources" element={<ResourcePage />} />
-        <Route path="modulepage" element={<ModulePage />} />
+        <Route path="modules/1" element={<ModuleOne />} />
+        <Route path="modules/2" element={<ModuleTwo />} />
+        <Route path="modules/3" element={<PlaceHolderModule />} />
+        <Route path="modules/4" element={<PlaceHolderModule />} />
+        <Route path="modules/5" element={<PlaceHolderModule />} />
+        <Route path="modules/6" element={<PlaceHolderModule />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

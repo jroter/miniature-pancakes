@@ -46,7 +46,7 @@
 
 .module-image {
     min-width: 357px;
-    background-image: url('../images/icon.png');
+    background-image: url('../../images/icon.png');
 }
 
 .next-module-header {
@@ -66,7 +66,7 @@
 }
 
 .new-module-small-img-background {
-    background-image: url('../images/icon.png');
+    background-image: url('../../images/icon.png');
     height: 200px;
     background-size: 100% 100%;
 }

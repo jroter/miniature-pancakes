@@ -29,7 +29,7 @@ const LandingPage = () => {
                         <div className="title">Welcome to the Start-Up/Entrepreneur database</div>
                         <p>Start up info and entrepreneurship</p>
                         <div className="header-button-content">
-                            <ButtonLinkComponent route='/modulepage' text='Start Now!'  />
+                            <ButtonLinkComponent route='/modules/1' text='Start Now!'  />
                             <span className='button-spacer'></span>
                             <LinkComponent label='Watch Now!' href="https://www.youtube.com/watch?v=tB70YAoxk6A&ab_channel=LifeFunnyPets" />
                         </div>

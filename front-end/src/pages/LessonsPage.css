@@ -141,6 +141,11 @@ body {
     border: 1px solid #A1AEB7;
 }
 
+.new-module-small > a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .new-module-title {
     font-size: 16px;
     color: #505D68;

@@ -2,33 +2,33 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 // CSS
-import './ModulePage.css';
+import './ModuleTwo.css';
 
 // Images
-import '../images/icon.png'
+import '../../images/icon.png'
 
 // Components
-import LinkComponent from '../components/LinkComponent';
-import FooterComponent from '../components/FooterComponent/FooterComponent';
-import LikeButtonComponent from '../components/LikeButtonComponent/LikeButton';
-import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
+import LinkComponent from '../../components/LinkComponent';
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
+import LikeButtonComponent from '../../components/LikeButtonComponent/LikeButton';
+import HeaderComponent from '../../components/HeaderComponent/HeaderComponent';
 
 const apiEndPoint = process.env.NODE_ENV === 'development' 
     ? 'http:localhost:4000'
     : 'https://fbn2d2rqa8.execute-api.us-west-2.amazonaws.com/prod'
 
-export default function ModulePage() {
+export default function ModuleTwo() {
 
     const [moduleData, setModuleData] = useState({})
     console.log(process.env);
     const getModuleData = () => {
-        axios.get(`${apiEndPoint}/module/1/`).then(response => {
+        axios.get(`${apiEndPoint}/module/2/`).then(response => {
             setModuleData(response.data)
         })
     }
 
     const addModuleLike = () => {
-        axios.post(`${apiEndPoint}/module/1/like`).then(_ => {
+        axios.post(`${apiEndPoint}/module/2/like`).then(_ => {
             getModuleData();
         })
     }
@@ -65,7 +65,7 @@ export default function ModulePage() {
         <div className="module-title-container">
             <div className='module-header'>
                 <LikeButtonComponent likes={moduleData.likes} handleClick={addModuleLike} />
-                <div className='module-title'>Module 1</div>
+                <div className='module-title'>Module 2</div>
             </div>
             <p className='module-info'>
                 {loren}
@@ -75,7 +75,7 @@ export default function ModulePage() {
             <div className='module-container'>
                 <div className='module-object'>
                     <div className='module-object-data'>
-                        <div className='module-title'>Module 1.1</div>
+                        <div className='module-title'>Module 2.1</div>
                             <p className='module-details'>
                                 {loren}
                             </p>
@@ -84,7 +84,7 @@ export default function ModulePage() {
                 </div>
                 <div className='module-object'>
                     <div className='module-object-data'>
-                        <div className='module-title'>Module 1.2</div>
+                        <div className='module-title'>Module 2.2</div>
                             <p className='module-details'>
                                 {loren}
                             </p>
@@ -93,7 +93,7 @@ export default function ModulePage() {
                 </div>
                 <div className='module-object'>
                     <div className='module-object-data'>
-                        <div className='module-title'>Module 1.3</div>
+                        <div className='module-title'>Module 2.3</div>
                             <p className='module-details'>
                                 {loren}
                             </p>

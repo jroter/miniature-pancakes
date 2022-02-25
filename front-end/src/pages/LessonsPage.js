@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 // CSS
@@ -44,20 +45,22 @@ export default function LessonsPage() {
     const renderCard = (index) => {
         return (
             <div className="new-module-small" key={`card-${index}`}>
-                <div className="new-module-small-img-background">
-                    <div className="module-label">
-                        Label
+                <Link to={`/modules/${index+1}`}>
+                    <div className="new-module-small-img-background">
+                        <div className="module-label">
+                            Label
+                        </div>
                     </div>
-                </div>
-                <div className="new-module-info">
-                    <div className="new-module-title">
-                        Module {moduleData[index]?.module} 
+                    <div className="new-module-info">
+                        <div className="new-module-title">
+                            Module {moduleData[index]?.module} 
+                        </div>
+                        <p className="new-module-data">
+                            {loren}
+                        </p>
+                        <ShowLikesComponent likes={moduleData[index]?.likes || 0} />
                     </div>
-                    <p className="new-module-data">
-                        {loren}
-                    </p>
-                    <ShowLikesComponent likes={moduleData[index]?.likes || 0} />
-                </div>
+                </Link>
             </div>
         )
     }
