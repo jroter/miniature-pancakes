@@ -7,6 +7,7 @@ In the project directory, you can run:
 Then we boot up DynamoDB by following these instructions found [here](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
 
 Once you're finished reading the command to start the DynamoDB enter this: 
+    
     java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 
 ## Creating Local Database

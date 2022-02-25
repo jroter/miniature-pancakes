@@ -87,7 +87,7 @@ A image component that can take in new image sources to be used for whatever pur
 A component that acts as a button with an href tag taking you elsewhere
 
 # Pages 
-
+These Pages were based off the wireframe kit on figma by @souandremoura
 ## `Landing Page` 
 This is the front-page: the first page the user sees. The page will allow user to either start where they last were or parooze the next modules. Finally, the landing page should offer some interesting articles pertaining to the main subject of start-ups and entrepreneurships
 
@@ -104,6 +104,8 @@ This page hosts other sources of information students can access to find out mor
 # How to Contribue 
 - Need to decide if each module page’s should be hosted on the NoSQL database or written on the front-end as static information. 
 - Research information regarding start-ups/entrepreneurship needs to be done as well.
-- Pages need to be implemented for each module regarding what Is needed from the customer. 
+- Pages need to be implemented for each module regarding what is needed from the customer. 
 - Authentication will be required if user specific information is going to be stored. Could create a naïve authenticator or use a cloud solution like AWS Cognito.
 - Future video content should be embedded to create a seamless customer experience.
+- make sure when designing the site you stick to the same design format that was used to build the essential wireframe components which are found [here](https://www.figma.com/file/SzeGXR04MRbIoVHk1hagza/Wireframe-Kit-(Community)?node-id=154%3A56362).
+

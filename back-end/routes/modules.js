@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const dynamo = require('../clients/dynamo');
 
+//Middleware for logging
+
 router.get('/', (req, res) => {
     const modDetails = {
         currentMod: 'Module 2.3', 

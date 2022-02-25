@@ -2,6 +2,18 @@
 
 ## Setup your environment
 
+### Downloading AWS CLI to manage AWS services 
+Follow this link [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+## New User set-up
+Create user using IAM on AWS
+Then set permissions 
+Reconfigure aws via the terminal
+```
+aws configure
+```
+then copy your Access Key ID and Secret Access Key ID to the terminal to access the necessary permissions
+
 ### Install Node Modules
 This installs the dependencies needed for this project
 ```
