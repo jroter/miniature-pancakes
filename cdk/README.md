@@ -72,3 +72,13 @@ cachePolicy: new CachePolicy(this, 'cacheManager',{
 ```
 Which is an object that contains a min,max and default.
 These can be altered by passing the number of minutes you want the cache to update
+*
+### Domain Name Changes
+If you need to change anything regarding the domain or the certificate
+Go to ***domain-stack.ts***
+Make sure to redeploy all stacks in this case we can use:
+```
+npm run deploy-stacks
+```
+
+For further references to the Domain Name quotas click [here](https://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html)

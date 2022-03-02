@@ -20,7 +20,7 @@ export default function LessonsPage() {
 
     const apiEndPoint = process.env.NODE_ENV === 'development' 
     ? 'http:localhost:4000'
-    : 'https://fbn2d2rqa8.execute-api.us-west-2.amazonaws.com/prod'
+    : 'https://api.uwb-css-startup.com'
 
     const getAllModulesData = () => {
         axios.get(`${apiEndPoint}/module/allmodules`).then(response => {

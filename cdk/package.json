@@ -8,7 +8,9 @@
     "build": "tsc",
     "bootstrap": "cdk bootstrap",
     "deploy-server": "cdk deploy BackEndStack",
-    "deploy-react": "cdk deploy FrontEndStack",
+    "deploy-react": "cd ../front-end && npm run build && cd ../cdk && npm run build && cdk deploy FrontEndStack",
+    "deploy-domain": "cdk deploy DomainStack",
+    "deploy-stacks":"cdk deploy *",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"

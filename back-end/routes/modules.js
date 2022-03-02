@@ -24,7 +24,6 @@ router.get('/:moduleId', async (req, res) => {
     res.send(dynamoResponse);
 });
 
-
 router.post('/:moduleId/visits', async (req, res) => {
     const moduleId = req.params.moduleId;
     const dynamoResponse = await dynamo.addVisit(moduleId);
