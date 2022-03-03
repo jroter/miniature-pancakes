@@ -1,3 +1,26 @@
 .head {
     height: 140px;
 }
+
+.header-link {
+    padding: 8px;
+    display: block;
+    text-decoration: none;
+    color: #566c78;
+    border-radius: 4px; 
+}
+
+.header-link:hover {
+    background-color: #C2D1D9; 
+}
+
+.header-link-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    padding-top: 15px;
+    padding-right: 30px;
+    border-bottom: 2px solid #C2D1D9;
+    padding-bottom: 15px;
+    font-size: 18px;
+}

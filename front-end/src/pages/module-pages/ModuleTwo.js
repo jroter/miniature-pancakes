@@ -15,7 +15,7 @@ import HeaderComponent from '../../components/HeaderComponent/HeaderComponent';
 
 const apiEndPoint = process.env.NODE_ENV === 'development' 
     ? 'http:localhost:4000'
-    : 'https://api.uwb-css-startup.com'
+    : 'https://owxh93u9i6.execute-api.us-west-2.amazonaws.com/prod'
 
 export default function ModuleTwo() {
 

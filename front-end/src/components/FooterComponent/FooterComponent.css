@@ -1,11 +1,22 @@
 .footer {
-    border: 1px solid #F2F5F7;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    padding-top: 15px;
+    padding-right: 30px;
+    border-top: 2px solid #C2D1D9;
+    padding-bottom: 15px;
+    font-size: 18px;
 }
 
-.router-footer {
-    float: right;
-    padding-bottom: 70px;
-    padding-right: 58px;
-    padding-top: 26px;
+.footer-link {
+    padding: 8px;
+    display: block;
     text-decoration: none;
+    color: #566c78;
+    border-radius: 4px; 
+}
+
+.footer-link:hover {
+    background-color: #C2D1D9; 
 }
